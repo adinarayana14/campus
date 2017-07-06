@@ -1,0 +1,333 @@
+/* 15. FOOTER */
+#footer {
+    background-color: #3C4A54;
+    @include rem(padding, 60px 0);
+    .hline {
+        background: #666666;
+        height: 1px;
+    }
+    .contact-form {
+        padding-bottom: 20px;
+        .form-control {
+            box-shadow: inset 0 0 0 rgba(0,0,0,0) !important;
+            background: #22303A;
+            border: none;
+            border-radius: 0;
+            height: 40px;
+            color: $white;
+            //color: $grey-70;
+
+            & input::-webkit-input-placeholder,
+            & input:-moz-placeholder,
+                & input::-moz-placeholder,
+                & input:-ms-input-placeholder,
+                & input[placeholder] {
+                //color: $white; //WTF, why no worky?? Should be worky!
+            }
+
+            &:focus {
+                border: none;
+                outline: none;
+                background: rgba(#22303A, 0.65);
+            }
+
+            &[readonly], &[disabled] {
+                border: none;
+                outline: none;
+                background: #f7c36e;
+            }
+
+            .has-error & {
+                border-color: darken(adjust-hue($brand-danger, -10), 20%) !important;
+            }
+            .has-warning & {
+                border-color: darken(adjust-hue($brand-warning, -10), 20%) !important;
+            }
+            .has-success & {
+                border-color: darken(adjust-hue($brand-success, -10), 20%) !important;
+            }
+
+        }
+
+        .btn-submit {
+            background: #E6705C;
+            @include border-radius(0);
+            color: white;
+            outline: 0;
+            line-height: 30px;
+            display: inline-block;
+            padding-left: 40px;
+            padding-right: 40px;
+            font-size: 16px;
+            text-decoration: none;
+            .active, &:active, &:hover, &:focus {
+                outline: 0;
+                color: white;
+                box-shadow: none;
+                background: darken(#E6705C, 10%);
+            }
+            &:disabled {
+                background: darken(#E6705C, 5%);
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    .copyright {
+        @include rem(padding-top, 10px);
+        color: white;
+        margin-top: 10px;
+        font-size: 12px;
+        text-align: center
+    }
+
+    .social-wrap {
+        .social {
+            color: white;
+            @include rem(padding-bottom, 10px);
+            @include rem(font-size, 25px);
+            text-align: center;
+            display: inline-block;
+            a {
+                color: white;
+                text-decoration: none;
+                i {
+                    line-height: 40px;
+                    width: 40px;
+                    @include rem(margin-left, 3px);
+                    @include border-radius(20px);
+                }
+                &:first-child {
+                    @include rem(margin-left, 10px);
+                }
+                &:last-child {
+                    @include rem(margin-right, 10px);
+                }
+                .facebook-bg {
+                    background-color: #617BBA;
+                    &:hover {
+                        background: darken(#617BBA, 10%);
+                    }
+                }
+                .twitter-bg {
+                    background-color: #84D0FF;
+                    &:hover {
+                        background: darken(#84D0FF, 10%);
+                    }
+                }
+                .linkedin-bg {
+                    background-color: #4C84C4;
+                    &:hover {
+                        background: darken(#4C84C4, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-info-wrap {
+        text-align: center;
+        @include bp(lap) { 
+            text-align: right;
+        }
+        .contact-info {
+            text-align: center;
+            display: inline-block;
+            .contact-phone {
+                @include rem(padding, 0 0 20px 0);
+                .icon-phone {
+                    @include rem(padding, 10px);
+                    img {
+                        border: none;
+                        height: 40px;
+                    }
+                }
+                .phone-number {
+                    p {
+                        color: $white;
+                        letter-spacing: 10px;
+                        @include rem(font-size, 15px);
+                    }
+                }
+            }
+            .contact-mail {
+                @include rem(padding, 30px 0 60px 0);
+                .icon-email {
+                    @include rem(padding, 10px);
+                    img {
+                        border: none;
+                        height: 30px;
+                    }
+                }
+                .email-addr {
+                    a {
+                        color: $white;
+                        @include rem(font-size, 15px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+
+    .menu-form {
+        background: #3B3B3A;
+        @include rem(padding, 40px 0 30px);
+        .footer-menu {
+            text-align: center;
+            @include bp(lap) { 
+                text-align: left;
+            }
+            a {
+                text-decoration: none;
+                display: inline-block;
+                @include rem(padding, 2px 0);
+                @include rem(margin, 5px 0);
+                color: $white;
+                &:hover, &:active, &.active {
+                    color: $grey-30;
+                }
+            }
+        }
+
+        .contact-form {
+            h2 {
+                color: $white;
+                font-weight: 600;
+                @include rem(font-size, 16px);
+                @include rem(margin, 10px 0 15px);
+            }
+            .control-label {
+                color: $white;
+            }
+            .form-control {
+                background: #4C4C4C;
+                border: 1px solid #4C4C4C;
+                color: $white;
+                &:focus {
+                    background: lighten(#4C4C4C, 10%);
+                }
+                & input::-webkit-input-placeholder,
+                & input:-moz-placeholder,
+                    & input::-moz-placeholder,
+                    & input:-ms-input-placeholder,
+                    & input[placeholder] {
+                    color: $white !important; //WTF, why no worky?? Should be worky!
+                }
+            }
+            
+            .has-error {
+                .form-control {
+                    //border: 1px solid;
+                }
+            }
+
+            .btn-submit {
+                background: #191919;
+                color: $white;
+                //border: 1px solid darken(#4EC0DF, 7%);
+                @include sans-serif-font();
+                outline: 0;
+                @include rem(padding, 8px 50px);
+                @include rem(font-size, 16px);
+                @include border-radius(0px);
+                &.active,&:active,
+                    &:hover, &:focus {
+                    outline: 0;
+                    color: #191919;
+                    box-shadow: none;
+                    background: $white;
+                }
+                &:disabled {
+                    background: #4EC0DF;
+                    @include opacity(0.4);
+                }
+            }
+        }
+        .content {
+            @include rem(margin, 30px 0 20px);
+            &.social-wrap {
+                text-align: center;
+                @include bp(lap) { 
+                    text-align: left;
+                }
+            }
+            .app-store {
+                @include rem(margin-bottom, 30px);
+                div {
+                    display: inline-block;
+                    @include rem(padding, 0 5px);
+                    text-align: center;
+                    p {
+                        text-align: center;
+                        color: $white;
+                        @include rem(margin-top, 5px);
+                        @include rem(font-size, 13px);
+                    }
+                }
+            }
+
+            .social {
+                @include rem(padding, 40px 0);
+                a {
+                    text-decoration: none;
+                    color: #3B3B3A;
+                    text-align: center;
+                    background: #CC1410;
+                    display: inline-block;
+                    @include rem(margin, 0 2px);
+                    width: 34px;
+                    height: 34px;
+                    @include border-radius(17px);
+                    line-height : 40px;
+                    i {
+                        @include rem(font-size, 25px);
+                    }
+                }
+            }
+
+            .address {
+                p {
+                    color: $white;
+                }
+            }
+        }
+
+    }
+
+    .copyright-grid {
+        background: #CBCBCB;
+        @include rem(padding, 20px 0 15px);
+        .site {
+            text-align: center;
+            @include rem(margin-bottom, 20px);
+            @include bp(lap) {
+                text-align: left;
+                @include rem(margin-bottom, 8px);
+            }
+            a {
+                text-decoration: none;
+                color: $black;
+                img {
+                    height: 22px;
+                    @include rem(margin-right, 10px);
+                    @include rem(margin-top, -5px);
+                }
+            }
+        }
+
+        .copyright {
+            text-align: center;
+            @include bp(lap) { 
+                text-align: right;
+            }
+            p {
+                @include rem(font-size, 13px);
+            }
+        }
+    }
+}
+
+

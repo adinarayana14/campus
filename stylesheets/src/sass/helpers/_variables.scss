@@ -1,0 +1,143 @@
+// ===| Breakpoint Sizing
+$tiny-handheld : 280px;
+$handheld      : 320px;
+$handheld-wide : 480px;
+$tiny-lap      : 600px;
+$lap           : 768px;
+$lap-wide      : 1024px;
+$desktop       : 1200px;
+$desktop-wide  : 1320px;
+
+// ===| Type Sizing
+$font-size-base : 18px;
+$font-size-h1   : floor(($font-size-base * 2.6));  // ~41px
+$font-size-h2   : floor(($font-size-base * 2.15)); // ~34px
+$font-size-h3   : ceil(($font-size-base * 1.7));   // ~28px
+$font-size-h4   : ceil(($font-size-base * 1.40));  // ~23px
+$font-size-h5   : ceil(($font-size-base * 1.10));  // ~18px
+$font-size-h6   : $font-size-base;                 // ~16px
+
+// ===| Type Spacing
+$line-height-base     : 1.428571429; // 20/14
+$line-height-computed : floor(($font-size-base * $line-height-base)); // ~20px
+$headings-line-height : 1.1;
+
+// ===| Animation Helpers
+$transition-timing : 0.25s;
+$transition-bezier : cubic-bezier(0.44, 0.31, 0.26, 0.95);
+
+// ===| Greyscale
+$black-opaque-90 : rgba(0,0,0,0.9);
+$black-opaque-80 : rgba(0,0,0,0.8);
+$black-opaque-70 : rgba(0,0,0,0.7);
+$black-opaque-60 : rgba(0,0,0,0.6);
+$black-opaque-50 : rgba(0,0,0,0.5);
+$black-opaque-40 : rgba(0,0,0,0.4);
+$black-opaque-30 : rgba(0,0,0,0.3);
+$black-opaque-20 : rgba(0,0,0,0.2);
+$black-opaque-10 : rgba(0,0,0,0.1);
+$black-opaque-05 : rgba(0,0,0,0.05);
+$black 			     : rgb(0,0,0);       // 000000
+$grey-05   	     : rgb(240,240,240); // f0f0f0
+$grey-10  		   : rgb(230,230,230); // e6e6e6
+$grey-20         : rgb(210,210,210); // d2d2d2
+$grey-30         : rgb(190,190,190); // bebebe
+$grey-40  		   : rgb(170,170,170); // aaaaaa
+$grey-50         : rgb(150,150,150); // 969696
+$grey-60  		   : rgb(130,130,130); // 828282
+$grey-70  	     : rgb(110,110,110); // 6e6e6e
+$grey-80      	 : rgb(90,90,90);    // 5a5a5a
+$grey-90      	 : rgb(65,65,65);    // 414141
+$white 			     : rgb(255,255,255); // ffffff
+$white-opaque-05 : rgba(255,255,255,0.05);
+$white-opaque-10 : rgba(255,255,255,0.1);
+$white-opaque-20 : rgba(255,255,255,0.2);
+$white-opaque-30 : rgba(255,255,255,0.3);
+$white-opaque-40 : rgba(255,255,255,0.4);
+$white-opaque-50 : rgba(255,255,255,0.5);
+$white-opaque-60 : rgba(255,255,255,0.6);
+$white-opaque-70 : rgba(255,255,255,0.7);
+$white-opaque-80 : rgba(255,255,255,0.8);
+$white-opaque-90 : rgba(255,255,255,0.9);
+$transparent     : rgba(0,0,0,0);
+
+// ===| Brand Colors
+$brand-primary : #428BCA !default;
+$brand-success : #5CB85C !default;
+$brand-info    : #5BC0DE !default;
+$brand-warning : #e59f23 !default;
+$brand-danger  : #d9534f !default; // 992B28
+$brand-alpha   : #006A72 !default;
+$brand-bravo   : #0097A9 !default;
+$brand-charlie : #83C7CC !default;
+$brand-delta   : #AAE5CC !default;
+$brand-echo    : #A580DD !default;
+$brand-foxtrot : #992B28 !default;
+$brand-gamma   : #E3DAC9 !default;
+$brand-hilo    : #D88D5B !default;
+
+// ===| Asset Icon Colors
+$asset-color-code-default : #0C395B;
+$asset-color-code-one     : #b3171a;
+$asset-color-code-two     : #fc4d00;
+$asset-color-code-three   : #e59f23;
+$asset-color-code-four    : #955f1a;
+$asset-color-code-five    : #006200;
+$asset-color-code-six     : #40E0D0;
+$asset-color-code-seven   : #0C395B;
+$asset-color-code-eight   : #0000FF;
+$asset-color-code-nine    : #5d006b;
+$asset-color-code-ten     : #cc11be;
+$asset-color-code-eleven  : #562f14;
+$asset-color-code-twelve  : #000000;
+
+// ===| Social Colors
+$social-facebook    : #3B5998;
+$social-twitter     : #00ACED;
+$social-google-plus : #D14836;
+$social-youtube     : #CD332D;
+$social-linkedin    : #217BC1;
+$social-skype       : #00AFF0;
+
+// ===| Social Colors
+
+$green-one : #8BC44D;
+$green-two : #3DC467;
+$main-heading : #8cc64a;
+// ===| Type Colors
+$body-copy    : $grey-60;
+$headings     : $grey-80;
+$link         : $brand-bravo;
+$link-hovered : lighten($brand-bravo, 10%);
+
+// ===| Z-Index Scale
+$z-index-10 : 9999999999;
+$z-index-9  : 999999999;
+$z-index-8  : 99999999;
+$z-index-7  : 9999999;
+$z-index-6  : 999999;
+$z-index-5  : 99999;
+$z-index-4  : 9999;
+$z-index-3  : 999;
+$z-index-2  : 99;
+$z-index-1  : 9;
+$z-index-0  : 0;
+
+//yellow background color
+
+$yellow-bg-1 : #FFCC00;
+$yellow-bg-2 : #FFB700;
+$yellow-bg-3 : #FFB700;
+//$yellow: #f39c12;
+
+$orange: #E6705C;
+$graybg: #EBE9E0;
+$yellow1: #FADC91;
+$yellow2: #FBC45F;
+$blue1: #144B74;
+$blue2: #1378BD;
+$green1: #43CCCC;
+$green2: #68BE99;
+$pink1: #FFC0B5;
+$pink2: #F78571;
+

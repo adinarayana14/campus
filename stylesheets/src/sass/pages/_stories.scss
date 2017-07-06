@@ -1,0 +1,195 @@
+.normal-page {
+    .wrapper {
+        @include rem(margin-top, 85px);   
+    }
+    .main-headers {
+        color: #4EC1E0;
+        font-weight: 400;
+        @include rem(font-size, 32px);
+    }
+    
+    .section {
+        //@include rem(padding, 0);
+        &.section-products {
+            @include rem(padding, 0);
+            background-color: transparent;
+            h2 {
+                color: inherit;
+            }
+        }
+        
+        &.section-testmonials {
+            @include rem(padding, 30px 0 0 0);
+            background-color: transparent;
+            h2 {
+                color: inherit;
+            }
+        }
+    }
+}
+
+.stories {
+    .content {
+        text-align: justify;
+        @include rem(margin, 30px 0 20px);
+        .himage {
+            @include rem(padding-bottom, 30px);
+            height: 100px;
+            width: auto;
+        }
+        h2 {
+            @include rem(font-size, 15px);
+            font-weight: bold;
+        }
+
+        .post {
+            background: #E5E5E5;
+            @include rem(padding, 20px 25px 50px);
+            @include rem(margin, 0 0 20px);
+            img {
+                width: 110%;
+                height: auto;
+            }
+            h2 {
+                color: #CB0201;
+                @include rem(font-size, 15px);
+                @include rem(margin-top, 0);
+                font-weight: bold;
+            }
+            &.active {
+                background: darken(#E5E5E5, 6);
+            }            
+        }
+        
+        .client {
+            @include rem(margin-top, 20px);
+            text-align: center;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .view-article {
+        @include rem(padding-top, 15px);
+        a {
+            display: inline-block;
+            &.btn-more {
+                background: #4EC0DF;
+                color: $white;
+                //border: 1px solid darken(#4EC0DF, 7%);
+                //@include sans-serif-font();
+                outline: 0;
+                @include rem(padding, 6px 25px);
+                @include rem(font-size, 14px);
+                @include border-radius(20px);
+                &.active,&:active,
+                    &:hover, &:focus {
+                    outline: 0;
+                    //color: $black;
+                    box-shadow: none;
+                    background: darken(#4EC0DF, 10);
+                }
+                &:disabled {
+                    background: #4EC0DF;
+                    @include opacity(0.4);
+                }
+            }
+        }
+    }
+}
+
+.swrap {
+    background: #E5E5E5;
+    @include rem(padding, 18px 20px);
+    @include rem(margin-bottom, 20px);
+    h2 {
+        color: #4EC1E0;
+        font-weight: 400;
+        @include rem(font-size, 20px);
+    }
+    .slick-prev{
+        left: -20px;
+    }
+    .slick-next {
+        right: -20px;
+    }
+    .slick-prev:before, .slick-next:before {
+        font-size: 40px;
+        color: #808080;
+    }
+    .slider {
+        a {
+            text-decoration: none;
+            color: $black;
+            display: inline-block;
+            @include rem(margin, 10px);
+            float: left;
+            text-decoration: none;
+            .content {
+                background-color: $white;
+                @include rem(margin, 0);
+                @include rem(padding, 5px 25px 15px 25px);
+                text-align: left;
+                img {
+                    height: 80px;
+                    width: auto;
+                    display: inline-block;
+                }
+                h3 {
+                    @include rem(font-size, 15px);
+                    font-weight: bold;
+                }
+            }
+            &:hover {
+                .content {
+                    background-color: #4EC1E0;
+                    color: $white;
+                    h3 {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.more-stories {
+    @include rem(padding-top, 20px);
+    h3 {
+        color: #4EC1E0;
+        font-weight: 400;
+        @include rem(font-size, 20px);
+        @include rem(margin-bottom, 20px);
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+            .post {
+                background: darken(#E5E5E5, 5);
+            }
+        }
+        * {
+            -webkit-transition: all .1s ease-in-out;
+            -moz-transition: all .1s ease-in-out;
+            -o-transition: all .1s ease-in-out;
+            transition: all .1s ease-in-out;
+        }
+    }
+    .post {
+        background: #E5E5E5;
+        @include rem(padding, 15px 20px);
+        @include rem(margin, 0 0 20px);
+        img {
+            width: 110%;
+            height: auto;
+        }
+        h2 {
+            @include rem(font-size, 15px);
+            @include rem(margin-top, 0);
+            font-weight: bold;
+        }
+
+    }
+}

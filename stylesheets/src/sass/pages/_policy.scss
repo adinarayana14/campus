@@ -1,0 +1,31 @@
+.policy-wrap {
+    .content {
+        @include rem(margin, 40px 0 40px);
+
+        ul { 
+            counter-reset: item;
+            position: relative;
+            @include rem(padding-left, 12px);
+            @include rem(margin, 7px 0 10px);
+            li {
+                display: block;
+                @include rem(padding-left, 20px);
+                @include rem(margin-bottom, 7px);
+                &:before {
+                    content: counters(item, ".") ". "; 
+                    counter-increment: item;
+                    position: absolute;
+                    left: 0;
+                    font-weight: 600;
+                }
+                ul li {
+                    @include rem(padding-left, 30px);
+                    ul li {
+                        @include rem(padding-left, 40px);
+                    }
+                }
+            }
+        }
+    }
+}
+

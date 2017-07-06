@@ -1,0 +1,11 @@
+.half,
+.third,
+.quarter,
+.fifth {
+  display: block;
+  float: left;
+}
+.half { width: 50%; }
+.third { width: 33.3334%; }
+.quarter { width: 25%; }
+.fifth { width: 20%; }
