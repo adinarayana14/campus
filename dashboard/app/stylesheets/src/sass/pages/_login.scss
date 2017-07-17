@@ -1,0 +1,45 @@
+// Login View Specific Styling
+// ===========================================================================
+body.login {
+  background: $grey-20;
+  .header-wrap {
+    display: none;
+  }
+
+  .logo-wrapper {
+    width: 250px;
+    margin: 0 auto;
+    svg, img {
+      display: block;
+      margin: auto;
+      width: 100%;
+      max-width: 300px;
+    }
+    svg {
+      max-height: 47px;
+    }
+    img {
+      height: auto;
+    }
+  }
+
+  .log-reg-body {
+    float: none;
+    margin-top: 25px;
+  }
+
+  .log-reg-footer {
+    position: relative;
+  }
+
+  .main-wrap {
+    margin-top: 0;
+  }
+  
+  .log-reg-header {
+    background: lighten($grey-05, 4%);
+    padding: 20px;
+    border-bottom: 1px solid $grey-30;
+  }
+
+} // .login

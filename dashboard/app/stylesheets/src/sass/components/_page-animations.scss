@@ -1,0 +1,52 @@
+// Entering Animations
+// ===================================
+.main .content {
+  &.ng-enter {
+    animation: scaleUpCenter $transition-timing both $transition-bezier;
+    z-index: $z-index-4;
+    -webkit-animation-delay: $transition-timing;
+    animation-delay: $transition-timing;
+  }
+  &.ng-leave {
+    animation: scaleDownCenter $transition-timing both $transition-bezier;
+    z-index: $z-index-5;
+  }
+} // .main .content
+
+.masthead,
+.back-arrow {
+  &.ng-enter,
+  &.ng-leave {
+    visibility: hidden;
+    &.ng-enter-active,
+    &.ng-leave-active {
+      visibility: visible;
+    }
+  }
+}
+
+
+// The Animations
+// @-webkit-keyframes scaleDownCenter {
+//   from { opacity: 1; }
+//   to { opacity: 0; }
+// }
+@keyframes scaleDownCenter {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+// @-webkit-keyframes scaleUpCenter {
+//   from { opacity: 0; }
+//   to { opacity: 1; }
+// }
+@keyframes scaleUpCenter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.collapsing {
+  transition-property: all;
+  transition-timing-function: $transition-bezier;
+  transition-duration: $transition-timing;
+}

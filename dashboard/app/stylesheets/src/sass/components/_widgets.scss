@@ -1,0 +1,16 @@
+.widget-simple {
+  .widget-simple-header {
+    @include rem(padding, 20px);
+    @include border-radius(3px 3px 0 0);
+    .widget-simple-heading {
+      @include rem(margin, 0);
+      font-weight: normal;
+    }
+  }
+}
+
+.box-header-big {
+  .box-title {
+    line-height: 32px;
+  }
+} 

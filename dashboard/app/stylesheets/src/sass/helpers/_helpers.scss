@@ -1,0 +1,42 @@
+// Non-Semantic Helpers from http://h5bp.com
+
+// Image replacement
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+  }
+}
+
+// This will hide the element both visually and from screen readers
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+// This is great for hiding things and leaving them accessible for screen readers
+.is-vishidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  &.focusable:active,
+  &.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}

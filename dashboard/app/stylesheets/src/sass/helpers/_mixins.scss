@@ -1,0 +1,162 @@
+// Clearfix
+@mixin clearfix() {
+  &:before,
+    &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: #{alpha(opacity=$opacity-ie)};
+}
+
+// Media Queries Mixin to include different breakpoints inline
+// Usage Example --> @include bp(tiny-lap) { Your Style Declarations... }
+@mixin bp($break) {
+  @if $break == tiny-handheld {
+    @media screen and (min-width: 280px) {
+      @content;
+    }
+  }
+  @else if $break == handheld {
+    @media screen and (min-width: 320px) {
+      @content;
+    }
+  }
+  @else if $break == handheld-wide {
+    @media screen and (min-width: 480px) {
+      @content;
+    }
+  }
+  @else if $break == tiny-lap {
+    @media screen and (min-width: 600px) {
+      @content;
+    }
+  }
+  @else if $break == lap {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @else if $break == lap-wide {
+    @media only screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+  @else if $break == desktop {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+  @else if $break == desktop-wide {
+    @media only screen and (min-width: 1320px) {
+      @content;
+    }
+  }
+}
+
+// Media Queries Mixin to include different breakpoints inline
+// Usage Example --> @include bpmax(tiny-lap) { Your Style Declarations... }
+@mixin bpmax($break) {
+  @if $break == tiny-handheld {
+    @media screen and (max-width: 280px) {
+      @content;
+    }
+  }
+  @else if $break == handheld {
+    @media screen and (max-width: 320px) {
+      @content;
+    }
+  }
+  @else if $break == handheld-wide {
+    @media screen and (max-width: 480px) {
+      @content;
+    }
+  }
+  @else if $break == tiny-lap {
+    @media screen and (max-width: 640px) {
+      @content;
+    }
+  }
+  @else if $break == lap {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @else if $break == lap-wide {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+  @else if $break == desktop {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+  @else if $break == desktop-wide {
+    @media only screen and (max-width: 1320px) {
+      @content;
+    }
+  }
+}
+
+
+// High Density Pixel Displays (Retina)
+@mixin hidpi($media: all) {
+  @media
+  only #{$media} and (min--moz-device-pixel-ratio: 1.5),
+    only #{$media} and (-o-min-device-pixel-ratio: 3/2),
+    only #{$media} and (-webkit-min-device-pixel-ratio: 1.5),
+    only #{$media} and (min-device-pixel-ratio: 1.5),
+    only #{$media} and (min-resolution: 144dpi),
+    only #{$media} and (min-resolution: 1.5dppx) {
+
+    @content;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin boxshadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow:$top $left $blur $color #{$inset};
+  -moz-box-shadow:$top $left $blur $color #{$inset};
+  box-shadow:$top $left $blur $color #{$inset};
+}
+
+@mixin boxshadow2($codeStr) {
+  -webkit-box-shadow:$codeStr;
+  -moz-box-shadow:$codeStr;
+  box-shadow:$codeStr;
+}
+
+@mixin div-same-size-as-background-img($url) { 
+  background-image: url($url); 
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat; 
+  width: 100%; 
+  height: 0;
+  //padding-top: percentage(image-height($url) / image-width($url)); 
+}
+@mixin div-same-size-as-background-pad($height, $width) {  
+   padding-top: percentage($height / $width);
+}
+
+@mixin div-same-size-as-background-content($height, $width) {  
+   margin-top: -(percentage($height / $width));
+}
+
+

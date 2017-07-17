@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28 Jun, 2016, 10:46:11 AM
+    Author     : Adinarayana.I
+*/
+
+@charset "UTF-8";
+/* ========================================================================== *\
+    Includes
+\* ========================================================================== */
+@import "sass/helpers/variables";
+@import "sass/helpers/mixins";
+@import "sass/helpers/functions";
+
+
+/* ========================================================================== *\
+    Base Styles
+\* ========================================================================== */
+@import "sass/base/typeface-includes";
+@import "sass/base/scaffolding";
+@import "sass/base/headings";
+@import "sass/base/links";
+@import "sass/base/lists";
+@import "sass/base/buttons";
+@import "sass/base/simple-grid";
+@import "sass/base/alerts";
+@import "sass/helpers/helpers";
+
+/* ========================================================================== *\
+    Component Styles
+\* ========================================================================== */
+@import "sass/components/accordion";
+@import "sass/components/page-animations";
+@import "sass/components/datepicker";
+@import "sass/components/side-panel";
+@import "sass/components/widgets";
+
+/* ========================================================================== *\
+    Layout Styles
+\* ========================================================================== */
+@import "sass/layout/main";
+
+/* ========================================================================== *\
+    Page Specific Styles
+\* ========================================================================== */
+@import "sass/pages/404";
+@import "sass/pages/login";
+@import "sass/pages/register";
+@import "sass/pages/password-reset";
+@import "sass/pages/index";
+@import "sass/pages/updatesgall";
+
+/* ========================================================================== *\
+    IE Styles & Shameful CSS that just had to be written
+\* ========================================================================== */
+@import "sass/overrides/ie";
+@import "sass/overrides/shame";
+

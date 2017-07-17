@@ -1,0 +1,128 @@
+.btn {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  //@include rem(padding, 10px 20px);
+  @include border-radius(0);
+  &.btn-default {
+      background-color: lighten($grey-05, 3%);
+  }
+}
+
+.btn-full-width {
+  display: block;
+  width: 100%;
+}
+
+.btn-half {
+  display: block;
+  float: left;
+  width: 48%;
+  &:first-of-type {
+    margin-right: 2%;
+  }
+  &:last-of-type {
+    margin-left: 2%;
+  }
+}
+
+.cal-icon {
+  color: #63a8d5;
+}
+
+.select-icon {
+  color: $grey-60;
+  font-size: 11px
+}
+
+.check-radio1 {
+  display:inline-block;
+  outline: none;
+  position: relative;
+  height:24px;  
+  vertical-align:middle;
+  cursor: pointer;
+  line-height: 24px;
+}
+.check-radio-checked {
+  background-color: $yellow-bg-1 !important;
+  @include boxshadow2(inset 0 0 0 2px $white);
+}
+
+.check-radio-disabled {
+  background-color: $grey-30 !important;
+  @include boxshadow2(inset 0 0 0 2px $white);
+}
+.rcheck {
+  position: relative;
+  input[type="checkbox"], input[type="radio"] {
+    display: none;
+  }
+  input[type="checkbox"] + label, input[type="radio"] + label {
+    @extend .check-radio1;
+    padding-left: 34px;
+    font-weight: normal;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 24px;
+      width: 24px;
+      border: 2px solid $grey-30;
+      background-color: $white;
+    }
+  }
+  input[type="radio"] + label {
+    &:before {
+      @include border-radius(50%);
+    }
+  }
+  input[type="checkbox"]:checked + label, 
+    input[type="radio"]:checked + label {
+    &:before {
+      @extend .check-radio-checked;
+    }    
+  }
+  input[type="checkbox"]:disabled + label, 
+    input[type="radio"]:disabled + label {
+    cursor: not-allowed;
+    &:before {
+      @extend .check-radio-disabled;
+    }    
+  }
+  &.btn-right {
+    input[type="checkbox"] + label, input[type="radio"] + label {
+      @extend .check-radio1;
+      padding-left: 0;
+      padding-right: 34px;
+      &:before {
+        left: auto;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}

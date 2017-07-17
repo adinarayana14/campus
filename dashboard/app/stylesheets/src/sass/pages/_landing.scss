@@ -1,0 +1,38 @@
+// Welcome/Landing View Specific Styling
+// ===========================================================================
+landing {
+
+  .header-wrap {
+    display: none;
+  }
+
+  .logo-wrapper {
+    width: 150px;
+    svg, img {
+      display: block;
+      margin: auto;
+      width: 100%;
+      max-width: 300px;
+    }
+    svg {
+      max-height: 47px;
+    }
+    img {
+      height: auto;
+    }
+  }
+
+  .main-wrap { margin-top: 0; }
+
+  .log-reg-header,
+  .log-reg-footer {
+    position: fixed !important;
+    z-index: $z-index-3;
+  }
+
+  .log-reg-header {
+    width: 100%;
+  }
+
+
+} // .landing

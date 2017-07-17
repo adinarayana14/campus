@@ -1,0 +1,10 @@
+@mixin sans-serif-font() {
+  font-family: Helvetica, Arial, Helvetica, sans-serif;
+}
+@mixin serif-font() {
+    font-family: Helvetica, sans-serif;
+}
+
+@mixin open-sans() {
+  font-family: 'Open Sans', sans-serif;
+}

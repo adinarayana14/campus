@@ -1,0 +1,39 @@
+.side-panel {
+  width: 290px;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  background: $white;
+  border: 1px solid $grey-20;
+  z-index: 1999;  
+  @include boxshadow(0, 0, 15px, $black-opaque-50);
+  .side-panel-header {
+    padding: 10px;
+    text-align: right;
+    &:before {
+      background: red;
+      width: 30px;
+      border: 5px solid greenyellow;
+      height: 20px;
+      position: absolute;
+      top: 15px;
+      left: -35px;
+    }
+    a {
+      padding: 5px;
+      .close-icon {
+        width: 16px;
+        height: auto;
+      }  
+    }
+
+  }
+  .side-panel-content {
+    padding: 10px 15px;
+  }
+  .side-panel-footer {
+    padding: 10px 15px;
+    background: $grey-10;
+    text-align: right
+  }
+}

@@ -1,0 +1,34 @@
+// Registration View Specific Styling
+// ===========================================================================
+body.register {
+
+  .header-wrap {
+    display: none;
+  }
+
+  .logo-wrapper {
+    svg, img {
+      display: block;
+      margin: auto;
+      width: 100%;
+      max-width: 300px;
+    }
+    svg {
+      max-height: 47px;
+    }
+    img {
+      height: auto;
+    }
+  }
+
+  .log-reg-body {
+    float: none;
+  }
+
+  .log-reg-footer {
+    position: relative;
+  }
+
+  .main-wrap { margin-top: 0; }
+
+} // body.register
